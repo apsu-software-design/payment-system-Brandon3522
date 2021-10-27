@@ -21,7 +21,7 @@ var Offline_payment = /** @class */ (function () {
         this.billing_address = address;
     };
     Offline_payment.prototype.obtain_info = function () {
-        console.log('Enter Online Payment Details.');
+        console.log('Enter Offline Payment Details.');
         this.name = readlineSync.question('  Name: ');
         this.billing_address = readlineSync.question('  Enter Your Billing Address: ');
         var info = [this.name, this.billing_address];

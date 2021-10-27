@@ -4,6 +4,7 @@ exports.payment_selection = void 0;
 var bankDraft_1 = require("./bankDraft");
 var creditCard_1 = require("./creditCard");
 var onlinePayment_1 = require("./onlinePayment");
+var offlinePayment_1 = require("./offlinePayment");
 var paymentSystemExecutor_1 = require("./paymentSystemExecutor");
 var payment_selection = /** @class */ (function () {
     function payment_selection() {
@@ -23,7 +24,7 @@ var payment_selection = /** @class */ (function () {
                 paymentSystemExecutor2.execute();
                 break;
             case "offline":
-                var paymentSystemExecutor3 = new paymentSystemExecutor_1.PaymentSystemExecutor(new onlinePayment_1.Online_payment());
+                var paymentSystemExecutor3 = new paymentSystemExecutor_1.PaymentSystemExecutor(new offlinePayment_1.Offline_payment());
                 paymentSystemExecutor3.execute();
                 break;
             default:

@@ -29,7 +29,7 @@ export class Offline_payment implements IPayment {
     }
 
     public obtain_info(): string[]{
-        console.log('Enter Online Payment Details.');
+        console.log('Enter Offline Payment Details.');
         this.name = readlineSync.question('  Name: ');
         this.billing_address = readlineSync.question('  Enter Your Billing Address: ');
         let info = [this.name, this.billing_address];
