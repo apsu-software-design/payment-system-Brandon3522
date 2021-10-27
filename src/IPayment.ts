@@ -1,6 +1,5 @@
 
-
-export interface IPayment {
-    obtain_info(paymentType: string): void;
-    validate_info(paymentType: string): void;
+export interface IPayment{
+    obtain_info(): string[];
+    validate_info(): boolean;
 }

@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var payment_systems_1 = require("./payment_systems");
-var credit = new payment_systems_1.Credit_card();
-credit.build();
+var paymentSystemExecutor_1 = require("./paymentSystemExecutor");
+var creditCard_1 = require("./creditCard");
+var paymentSystemExecutor = new paymentSystemExecutor_1.PaymentSystemExecutor(new creditCard_1.Credit_card());
+paymentSystemExecutor.execute();
+console.log("Test");

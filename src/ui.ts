@@ -3,6 +3,7 @@
 
 import readlineSync = require('readline-sync'); //for easier repeated prompts
 import {PaymentSystemContext} from './payment_systems';
+import { payment_selection } from './strategyFunction';
 
 /**
  * Function to run the UI
@@ -29,10 +30,10 @@ function showMainMenu(psc:PaymentSystemContext) {
     }
 
     switch(response) { //handle each response
-      case '1': showCreditCardPaymentMenu(psc); break;
-      case '2': showBankDraftPaymentMenu(psc); break;
-      case '3': showOnlinePaymentMenu(psc); break;
-      case '4': showOfflinePaymentMenu(psc); break;
+      case '1': payment_selection.payment_selection("credit card"); break;
+      case '2': payment_selection.payment_selection("bank draft"); break;
+      case '3': payment_selection.payment_selection("online"); break;
+      case '4': payment_selection.payment_selection("offline"); break;
       default: console.log('Invalid option!');
     }
     console.log(''); //extra empty line for revisiting

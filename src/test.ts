@@ -1,6 +1,7 @@
-import { PaymentSystemExecutor } from './payment_systems'
-import { Credit_card } from './payment_systems'
+import { PaymentSystemExecutor } from './paymentSystemExecutor';
+import { Credit_card } from './creditCard';
 
+let paymentSystemExecutor = new PaymentSystemExecutor(new Credit_card());
+paymentSystemExecutor.execute();
 
-let credit = new Credit_card();
-credit.build();
+console.log("Test");

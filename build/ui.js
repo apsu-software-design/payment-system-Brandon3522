@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.start = void 0;
 var readlineSync = require("readline-sync"); //for easier repeated prompts
 var payment_systems_1 = require("./payment_systems");
+var strategyFunction_1 = require("./strategyFunction");
 /**
  * Function to run the UI
  */
@@ -24,16 +25,16 @@ function showMainMenu(psc) {
         }
         switch (response) { //handle each response
             case '1':
-                showCreditCardPaymentMenu(psc);
+                strategyFunction_1.payment_selection.payment_selection("credit card");
                 break;
             case '2':
-                showBankDraftPaymentMenu(psc);
+                strategyFunction_1.payment_selection.payment_selection("bank draft");
                 break;
             case '3':
-                showOnlinePaymentMenu(psc);
+                strategyFunction_1.payment_selection.payment_selection("online");
                 break;
             case '4':
-                showOfflinePaymentMenu(psc);
+                strategyFunction_1.payment_selection.payment_selection("offline");
                 break;
             default: console.log('Invalid option!');
         }
